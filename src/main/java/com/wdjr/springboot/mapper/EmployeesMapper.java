@@ -1,6 +1,7 @@
 package com.wdjr.springboot.mapper;
 
 import com.wdjr.springboot.bean.Employees;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -17,4 +18,7 @@ public interface EmployeesMapper {
 
     @Update(value = "update employees")
     void edit(Employees employees);
+
+    @Delete(value = "delete from employees where id = #{id}")
+    void  delEmp(int id);
 }

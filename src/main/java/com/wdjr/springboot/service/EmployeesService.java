@@ -20,7 +20,21 @@ public class EmployeesService {
 
     public List<Employees> getAll(){
         List<Employees> all = employeesMapper.getAll();
-        log.info("=== all:{}",all.get(0).getDepartmentName());
         return all;
     }
+
+    /**
+     * 删除emp
+     * @param id
+     */
+    public void delEmp(int id) {
+        employeesMapper.delEmp(id);
+    }
+
+    public void editEmp(Employees employees) {
+
+
+
+    }
+
 }
